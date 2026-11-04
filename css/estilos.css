@@ -1,107 +1,133 @@
-:root {
-    --color-borde: #000000;
-    --color-rojo-menu: #c00000;
-    --color-fondo-p1: #e6e6e6;
-    --color-fondo-p2: #cccccc;
-    --color-fondo-p3: #b3b3b3;
+/* Combinación de colores: ColorCombo14
+   #443266 (oscuro), #C3C3E5 (medio), #F1F0FF (claro) */
+* {
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-    background-color: #ffffff;
+  background-color: #F1F0FF;
+  font-family: "Times New Roman", Times, serif;
+  color: #000;
 }
 
-header h1 {
-    text-align: center;
-    border-top: 5px solid var(--color-borde);
-    border-bottom: 5px solid var(--color-borde);
-    padding: 10px 0;
-    margin-bottom: 20px;
+h1 {
+  font-size: 1.8em;
+  text-align: center;
 }
 
-.contenedor-principal {
+img {
+  border: 5px solid #000;
+  display: block;
+}
+
+ul {
+  list-style: none;
+  text-align: center;
+}
+
+li {
+  display: inline-block;
+}
+
+p {
+  text-indent: 40px;               /* 9. sangría primera línea */
+  text-align: justify;
+}
+
+/* 1. Título con línea de 5px negra */
+#header {
+  background-color: #C3C3E5;
+  border-bottom: 5px solid #000;
+}
+
+#content {
+  overflow: hidden;                /* contiene el float de la imagen */
+  padding-top: 10px;
+}
+
+/* 2 y 3. Imagen a la derecha con separación de 60px */
+#image {
+  float: right;
+  margin-right: 60px;
+}
+
+#text {
+  clear: both;
+  width: 90%;                      /* 10. ocupan el 90% de la ventana */
+  margin: 0 auto;
+}
+
+/* 5 y 11. Sombra y separación de 10px */
+#text p {
+  margin: 10px;
+  padding: 5px 10px;
+  background-color: #C3C3E5;
+  border: 5px solid #000;
+  box-shadow: 5px 5px 8px #444;
+}
+
+/* 4 y 12. Primer párrafo: esquinas superiores redondeadas y fondo repetido */
+#text p:first-child {
+  background: #F1F0FF url("../images/fondoParrafo.png") repeat;
+  border-style: dashed;
+  border-radius: 30px 30px 0 0;
+}
+
+/* 8. Último párrafo: esquinas inferiores redondeadas */
+#text p:last-child {
+  border-style: dashed;
+  border-radius: 0 0 30px 30px;
+}
+
+#menu {
+  margin: 10px 0;
+  text-align: center;
+}
+
+#menu a {
+  color: #443266;
+  text-decoration: none;
+}
+
+/* 7. Línea roja de 5px a la izquierda de cada opción */
+#menu li {
+  border-left: 5px solid red;
+  padding: 0 4px 0 3px;
+}
+
+/* 13. Subrayado rojo al pasar el ratón */
+#menu li a:hover {
+  text-decoration: underline;
+  text-decoration-color: red;
+}
+
+/* 6. Pie con línea superior de 5px negra */
+#footer {
+  background-color: #443266;
+  color: #F1F0FF;
+  text-align: center;
+  border-top: 5px solid #000;
+}
+
+#footer a {
+  color: #F1F0FF;
+  text-decoration: none;
+}
+
+#footer a:hover {
+  text-decoration: underline;
+  text-decoration-color: red;
+}
+
+@media all and (max-width: 500px) {
+  #image {
+    float: none;
+    margin: 10px auto;
     width: 90%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-
-.contenido-izquierda {
-    width: 63%;
-}
-
-.contenido-derecha {
-    width: 32%;
-    margin-right: 60px;
-}
-
-.imagen-derecha {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-
-.parrafo {
-    padding: 10px;
-    text-indent: 40px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-    margin-bottom: 15px;
-    border: 1px dashed #000;
-}
-
-.parrafo-1 {
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
-    background-image: url('../images/fondoParrafo.png');
-    background-repeat: repeat;
-}
-
-.parrafo-2 {
-    background-color: var(--color-fondo-p2);
-}
-
-.parrafo-3 {
-    border-bottom-left-radius: 30px;
-    border-bottom-right-radius: 30px;
-    background-color: var(--color-fondo-p3);
-}
-
-.menu-inferior {
-    width: 90%;
-    margin: 20px auto;
-}
-
-.menu-inferior ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.menu-inferior li {
-    border-left: 5px solid var(--color-rojo-menu);
-    padding-left: 8px;
-}
-
-.menu-inferior a {
-    text-decoration: none;
-    color: #000022;
-}
-
-.menu-inferior a:hover {
-    text-decoration: underline;
-    color: var(--color-rojo-menu);
-}
-
-footer {
-    width: 90%;
-    margin: 20px auto 0 auto;
-    border-top: 5px solid var(--color-borde);
-    text-align: center;
-    font-size: 0.9em;
-    padding-top: 10px;
+  }
+  #image img {
+    width: 100%;
+    box-sizing: border-box;
+  }
 }
