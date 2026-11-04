@@ -1,133 +1,123 @@
-/* Combinación de colores: ColorCombo14
-   #443266 (oscuro), #C3C3E5 (medio), #F1F0FF (claro) */
 * {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-  background-color: #F1F0FF;
-  font-family: "Times New Roman", Times, serif;
-  color: #000;
+    background-color: #F1F0FF;
+    color: #443266;
+    font-family: Arial;
 }
 
 h1 {
-  font-size: 1.8em;
-  text-align: center;
+    color: #F1F0FF;
+    background-color: #443266;
+    padding: 20px;
+    border-bottom: 5px solid black;
 }
 
 img {
-  border: 5px solid #000;
-  display: block;
+    max-width: 100%;
 }
 
 ul {
-  list-style: none;
-  text-align: center;
+    list-style-type: none;
 }
 
 li {
-  display: inline-block;
+    padding: 10px;
 }
 
 p {
-  text-indent: 40px;               /* 9. sangría primera línea */
-  text-align: justify;
+    text-indent: 40px;
 }
 
-/* 1. Título con línea de 5px negra */
 #header {
-  background-color: #C3C3E5;
-  border-bottom: 5px solid #000;
+    width: 100%;
+    text-align: center;
 }
 
 #content {
-  overflow: hidden;                /* contiene el float de la imagen */
-  padding-top: 10px;
-}
-
-/* 2 y 3. Imagen a la derecha con separación de 60px */
-#image {
-  float: right;
-  margin-right: 60px;
+    width: 90%;
+    margin: auto;
 }
 
 #text {
-  clear: both;
-  width: 90%;                      /* 10. ocupan el 90% de la ventana */
-  margin: 0 auto;
+    width: 100%;
 }
 
-/* 5 y 11. Sombra y separación de 10px */
 #text p {
-  margin: 10px;
-  padding: 5px 10px;
-  background-color: #C3C3E5;
-  border: 5px solid #000;
-  box-shadow: 5px 5px 8px #444;
+    width: 90%;
+    margin: 10px auto;
+    padding: 15px;
+    background-color: #C3C3E5;
+    box-shadow: 5px 5px 5px #443266;
 }
 
-/* 4 y 12. Primer párrafo: esquinas superiores redondeadas y fondo repetido */
 #text p:first-child {
-  background: #F1F0FF url("../images/fondoParrafo.png") repeat;
-  border-style: dashed;
-  border-radius: 30px 30px 0 0;
+    border-radius: 30px 30px 0 0;
+    background-image: url("../images/fondoParrafo.png");
+    background-repeat: repeat;
 }
 
-/* 8. Último párrafo: esquinas inferiores redondeadas */
 #text p:last-child {
-  border-style: dashed;
-  border-radius: 0 0 30px 30px;
+    border-radius: 0 0 30px 30px;
 }
 
 #menu {
-  margin: 10px 0;
-  text-align: center;
+    background-color: #443266;
+    padding: 10px;
 }
 
 #menu a {
-  color: #443266;
-  text-decoration: none;
+    color: #F1F0FF;
+    text-decoration: none;
 }
 
-/* 7. Línea roja de 5px a la izquierda de cada opción */
+#menu ul {
+    text-align: center;
+}
+
 #menu li {
-  border-left: 5px solid red;
-  padding: 0 4px 0 3px;
+    border-left: 5px solid red;
+    margin: 5px;
+    display: inline-block;
+    text-align: center;
 }
 
-/* 13. Subrayado rojo al pasar el ratón */
 #menu li a:hover {
-  text-decoration: underline;
-  text-decoration-color: red;
+    color: red;
+    text-decoration: underline;
 }
 
-/* 6. Pie con línea superior de 5px negra */
 #footer {
-  background-color: #443266;
-  color: #F1F0FF;
-  text-align: center;
-  border-top: 5px solid #000;
+    border-top: 5px solid black;
+    background-color: #C3C3E5;
+    padding: 20px;
+    text-align: center;
 }
 
 #footer a {
-  color: #F1F0FF;
-  text-decoration: none;
+    color: #8C489F;
 }
 
 #footer a:hover {
-  text-decoration: underline;
-  text-decoration-color: red;
+    color: red;
+}
+
+#image {
+    float: right;
+    margin-right: 60px;
 }
 
 @media all and (max-width: 500px) {
-  #image {
-    float: none;
-    margin: 10px auto;
-    width: 90%;
-  }
-  #image img {
-    width: 100%;
-    box-sizing: border-box;
-  }
+    #image {
+        float: none;
+        margin-right: 0;
+        text-align: center;
+    }
+
+    #text p {
+        width: 90%;
+    }
 }
